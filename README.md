@@ -3,19 +3,19 @@ The novel multitask learning method MTForestNet that can deal with data scarcity
 
 
 ## Requirements
-●Python3
+● Python3
 
-●pandas
+● pandas
 
-●NumPy	
+● NumPy	
 
-●tqdm
+● tqdm
 
-●stats	
+● stats	
 
-●scikit-learn	
+● scikit-learn	
 
-●joblib
+● joblib
 
 
 ## Installation
@@ -26,4 +26,21 @@ pip install tqdm==4.64.1
 pip install stats
 pip install scikit-learn==1.3.0
 pip install joblib==1.3.1
+```
+
+## How to cite?
+```
+@article{doi:,
+author = {Run-Hsin Lin, Pinpin Lin, Chia-Chi Wang, Chun-Wei Tung},
+title = {A Novel Multitask Learning Algorithm for Tasks with Distinct Chemical Space: Zebrafish Toxicity Prediction as an Example },
+journal = {Journal of Cheminformatics,
+volume = {},
+number = {},
+pages = {},
+year = {},
+doi = {},
+
+URL = {},
+eprint = {}
+}
 ```
