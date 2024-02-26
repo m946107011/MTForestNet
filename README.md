@@ -7,7 +7,7 @@ The novel multitask learning method MTForestNet that can deal with data scarcity
 
 ●pandas
 
-●numpy	
+●NumPy	
 
 ●tqdm
 
