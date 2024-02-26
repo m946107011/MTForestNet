@@ -17,3 +17,13 @@ The novel multitask learning method MTForestNet that can deal with data scarcity
 
 ●joblib
 
+
+## Installation
+```
+pip install pandas==2.0.3
+pip install numpy==1.24.4
+pip install tqdm==4.64.1
+pip install stats
+pip install scikit-learn==1.3.0
+pip install joblib==1.3.1
+```
