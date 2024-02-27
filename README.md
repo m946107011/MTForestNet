@@ -32,7 +32,8 @@ pip install joblib==1.3.1
 ```
 @article{doi:,
 author = {Run-Hsin Lin, Pinpin Lin, Chia-Chi Wang, Chun-Wei Tung},
-title = {A Novel Multitask Learning Algorithm for Tasks with Distinct Chemical Space: Zebrafish Toxicity Prediction as an Example },
+title = {A Novel Multitask Learning Algorithm for Tasks with Distinct Chemical Space:
+Zebrafish Toxicity Prediction as an Example },
 journal = {Journal of Cheminformatics,
 volume = {},
 number = {},
