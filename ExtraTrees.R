@@ -9,14 +9,16 @@ options(java.parameters = "-Xmx10g")
 #####main function######
 
 ET_MT <- function(feature_type){
-  
+
+  #read file#
   path <-str_c('/home1/rhlin/Zebrafish_final202310_withMorphologyALLdata_exclude_Lipid_ECFP6.xlsx')
   dat <- readxl::read_excel(path)
   
   if("SMILES" %in% colnames(dat))
   {dat<- subset( dat, select = -SMILES )
   }
-  
+
+  #daat partition#
   n_train <- 7
   n_valid <- 1
   n_test <- 2
@@ -28,7 +30,8 @@ ET_MT <- function(feature_type){
   ifelse (feature_type=='MMBART(B)',MMBART_B <- T,MMBART_B <- F)
   ifelse (feature_type=='MMBART(F)',MMBART_F <- T,MMBART_F <- F)    
   ifelse (feature_type=='smiles2vec',smiles2vec <- T,smiles2vec <- F)
-  
+
+  #setting#
   doTraining <- T
   modelType <- "et"
   #testSet <- "train"
@@ -71,6 +74,8 @@ ET_MT <- function(feature_type){
   }))
   
   #model_dat<-model_dat%>% drop_na()  
+
+
   
   mtry <- floor(log2(8))
   #train
@@ -113,7 +118,7 @@ ET_MT <- function(feature_type){
   }else{
   }
   
-  ###traindata####
+  ###train####
   if(modelType == "et"){
     p <- predict(et, model_dat %>% filter(model_dat$train_test == testSet) %>% select(
       selectCol
@@ -225,7 +230,7 @@ ET_MT <- function(feature_type){
 
 
 ######################################
-#Operation
+Operation
 ######################################
 x.list <- c('ECFP')
 
