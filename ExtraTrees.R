@@ -18,7 +18,7 @@ ET_MT <- function(feature_type){
   {dat<- subset( dat, select = -SMILES )
   }
 
-  #daat partition#
+  #data partition#
   n_train <- 7
   n_valid <- 1
   n_test <- 2
