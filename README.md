@@ -35,13 +35,10 @@ author = {Run-Hsin Lin, Pinpin Lin, Chia-Chi Wang, Chun-Wei Tung},
 title = {A Novel Multitask Learning Algorithm for Tasks with Distinct Chemical Space:
 Zebrafish Toxicity Prediction as an Example },
 journal = {Journal of Cheminformatics,
-volume = {},
-number = {},
-pages = {},
-year = {},
-doi = {},
-
-URL = {},
-eprint = {}
+volume = {16},
+number = {91},
+year = {2024},
+doi = {https://doi.org/10.1186/s13321-024-00891-4},
+URL = {https://jcheminf.biomedcentral.com/articles/10.1186/s13321-024-00891-4},
 }
 ```
