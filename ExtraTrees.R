@@ -11,7 +11,7 @@ options(java.parameters = "-Xmx10g")
 ET_MT <- function(feature_type){
 
   #read file#
-  path <-str_c('/home1/rhlin/Zebrafish_final202310_withMorphologyALLdata_exclude_Lipid_ECFP6.xlsx')
+  path <-str_c('/home1/rhlin/Zebrafish_final202310_withMorphologyALLdata_ECFP6.xlsx')
   dat <- readxl::read_excel(path)
   
   if("SMILES" %in% colnames(dat))
@@ -62,7 +62,7 @@ ET_MT <- function(feature_type){
   }
   
   
-  model_dat <- do.call("rbind",lapply(2:47,function(t){
+  model_dat <- do.call("rbind",lapply(2:49,function(t){
     task_dat <- select(dat,No,selectCol,colnames(dat)[t]) %>% rename(target=colnames(dat)[t])
     task_dat$task <- t-1
     task_dat$task_name <- colnames(dat)[t]
@@ -151,7 +151,7 @@ ET_MT <- function(feature_type){
     print(paste0("/",auc,"/",acc,"/",precision,"/",recall,
                  "/",speci))
     ##################################################################################    
-    lapply(1:46,function(t){
+    lapply(1:48,function(t){
       p <- predict(et, model_dat %>% filter(model_dat$train_test == testSet & model_dat$task == t) %>% select(
         selectCol
       ),
@@ -187,7 +187,7 @@ ET_MT <- function(feature_type){
     
     
   }else if(modelType =="st"){
-    lapply(1:46,function(t){
+    lapply(1:48,function(t){
       if(!doTraining){
         load(paste0("/home1/rhlin/fish/MLMTLPaper_File/R_model/-",t,ECFP,".rdata"))
       }else{
