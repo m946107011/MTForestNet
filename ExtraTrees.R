@@ -77,7 +77,7 @@ ET_MT <- function(feature_type){
 
 
   
-  mtry <- floor(log2(8))
+  mtry <- floor(log2(1024))
   #train
   model_dat_train <- model_dat %>% filter(model_dat$train_test=="train") %>% select(-train_test)
   if(doTraining){
